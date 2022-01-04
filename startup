@@ -4,4 +4,4 @@ git config branch.master.remote origin
 git config branch.master.merge refs/heads/app
 rm -fr *
 git pull
-gunicorn app:app
+python app.py
