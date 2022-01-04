@@ -12,5 +12,3 @@ def get_random_word(number=1):
             WORDS.append(_word)
 
         return WORDS
-
-

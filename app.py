@@ -19,6 +19,8 @@ def home():
 @app.route('/word')
 def random_word():
     _number = request.args.get('number')
+    print(_number)
+    return 'ok!'
 
     if _number:
         try:
@@ -33,7 +35,7 @@ def random_word():
 
 @app.errorhandler(500)
 async def error_500(error):
-    return str(error)
+    return '500'
 
 
 if __name__ == '__main__':
