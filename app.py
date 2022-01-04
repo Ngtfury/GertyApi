@@ -1,6 +1,9 @@
 import flask
 import helper
+import os
 from flask import Flask, request
+
+os.system('python --version')
 
 
 app = Flask(__name__)
