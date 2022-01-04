@@ -1,13 +1,31 @@
 <html>
 <head>
 <title>Home - Gerty Api</title>
+<style>
+    a:link, a:visited {
+      background-color: white;
+      color: black;
+      border: 2px solid green;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+    
+    a:hover, a:active {
+      background-color: green;
+      color: white;
+    }
+    </style>
 </head>
 <body>
 <h2 style = "color: greenyellow">Welcome to Gerty Api!</h2>
 
 <h3 style = "color: royalblue">Api endpoints:</h3>
 <ul style = "color: salmon;">
-    <li>/word - Generates random word</li>
+    <li>
+        <a href="https://gerty-api.herokuapp.com/word">/word</a> - Generates a random word
+    </li>
 </ul>
 </body>
 </html>
