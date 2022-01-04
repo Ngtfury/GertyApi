@@ -1,7 +1,7 @@
 import flask
 from flask import json
 import helper
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 
 
 app = Flask(__name__)
@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return 'Hello world!'
+    return render_template('templates/home.html')
 #    return flask.redirect('https://gerty-api.herokuapp.com/home')
 
 
