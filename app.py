@@ -31,6 +31,9 @@ def random_word():
     word = helper.get_random_word(_int_number)
     return word
 
+@app.errorhandler(500)
+async def error_500(error):
+    return str(error)
 
 
 if __name__ == '__main__':
