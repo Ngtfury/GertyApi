@@ -8,11 +8,13 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return flask.redirect('https://gerty-api.herokuapp.com/home')
-
-@app.route('/home')
-def home():
     return 'Hello world!'
+#    return flask.redirect('https://gerty-api.herokuapp.com/home')
+
+
+#@app.route('/home')
+#def home():
+#    return 'Hello world!'
 
 @app.route('/word')
 def random_word():
