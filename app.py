@@ -32,11 +32,10 @@ def random_word():
         _int_number = 1
 
     word = helper.get_random_word(_int_number)
-    print(word)
-    return word
+    return str(word)
 
 @app.errorhandler(500)
-async def error_500(error):
+def error_500(error):
     return '500'
 
 
