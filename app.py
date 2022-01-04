@@ -19,10 +19,8 @@ def home():
 @app.route('/word')
 def random_word():
     _number = request.args.get('number')
-    print(_number)
-    return 'ok!'
 
-    if _number:
+    if not _number == None:
         try:
             _int_number = int(_number)
         except:
@@ -31,6 +29,7 @@ def random_word():
         _int_number = 1
 
     word = helper.get_random_word(_int_number)
+    print(word)
     return word
 
 @app.errorhandler(500)
