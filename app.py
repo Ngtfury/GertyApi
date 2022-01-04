@@ -1,9 +1,6 @@
 import flask
 import helper
-import os
-from flask import Flask, request
-
-os.system('python --version')
+from flask import Flask, request, jsonify
 
 
 app = Flask(__name__)
@@ -32,11 +29,19 @@ def random_word():
         _int_number = 1
 
     word = helper.get_random_word(_int_number)
-    return str(word)
+    JSON = jsonify(
+        words = word,
+        code = 200
+    )
+    return JSON
 
 @app.errorhandler(500)
 def error_500(error):
-    return '500'
+    _json = jsonify(
+        message = 'There was an error while you tried to visit our page, our devs are working on it. Please be patient',
+        code = 500
+    )
+    return _json
 
 
 if __name__ == '__main__':
