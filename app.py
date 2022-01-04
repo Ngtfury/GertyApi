@@ -1,4 +1,5 @@
 import flask
+from flask import json
 import helper
 from flask import Flask, request, jsonify
 
@@ -41,7 +42,15 @@ def error_500(error):
         message = 'There was an error while you tried to visit our page, our devs are working on it. Please be patient',
         code = 500
     )
-    return _json
+    return _json, 500
+
+@app.errorhandler(404)
+async def page_not_found(error):
+    _json = jsonify(
+        message = 'The requested URL was not found in our server.',
+        code = 404
+    )
+    return _json, 404
 
 
 if __name__ == '__main__':
