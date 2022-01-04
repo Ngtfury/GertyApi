@@ -39,9 +39,10 @@ def random_word():
 @app.errorhandler(500)
 def error_500(error):
     _json = jsonify(
-        message = 'There was an error while you tried to visit our page, our devs are working on it. Please be patient',
+        message = 'There was an error while you tried to visit our page, our devs are working on it. Please be patient.',
         code = 500
     )
+    print(error)
     return _json, 500
 
 @app.errorhandler(404)
